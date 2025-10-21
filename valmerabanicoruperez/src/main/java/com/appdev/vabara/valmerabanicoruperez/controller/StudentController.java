@@ -1,8 +1,7 @@
-package com.example.studentsubjects.controller;
+package com.appdev.vabara.valmerabanicoruperez.controller;
 
-import com.example.studentsubjects.entity.Student;
-import com.example.studentsubjects.service.StudentService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.appdev.vabara.valmerabanicoruperez.entity.Student;
+import com.appdev.vabara.valmerabanicoruperez.service.StudentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,8 +11,11 @@ import java.util.List;
 @RequestMapping("/students")
 public class StudentController {
 
-    @Autowired
-    private StudentService studentService;
+    private final StudentService studentService;
+
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
 
     @PostMapping
     public ResponseEntity<Student> createStudent(@RequestBody Student student) {

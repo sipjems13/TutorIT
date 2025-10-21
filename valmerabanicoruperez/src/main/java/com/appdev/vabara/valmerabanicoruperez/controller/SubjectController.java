@@ -1,8 +1,7 @@
-package com.example.studentsubjects.controller;
+package com.appdev.vabara.valmerabanicoruperez.controller;
 
-import com.example.studentsubjects.entity.Subject;
-import com.example.studentsubjects.service.SubjectService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.appdev.vabara.valmerabanicoruperez.entity.Subject;
+import com.appdev.vabara.valmerabanicoruperez.service.SubjectService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,8 +11,11 @@ import java.util.List;
 @RequestMapping("/subjects")
 public class SubjectController {
 
-    @Autowired
-    private SubjectService subjectService;
+    private final SubjectService subjectService;
+
+    public SubjectController(SubjectService subjectService) {
+        this.subjectService = subjectService;
+    }
 
     @PostMapping
     public ResponseEntity<Subject> createSubject(@RequestBody Subject subject) {
