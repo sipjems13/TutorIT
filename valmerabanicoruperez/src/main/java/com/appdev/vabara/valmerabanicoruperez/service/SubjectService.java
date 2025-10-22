@@ -1,4 +1,4 @@
-package com.appdev.vabara.Service;
+package com.appdev.vabara.valmerabanicoruperez.service;
 
 import com.appdev.vabara.valmerabanicoruperez.entity.Subject;
 import com.appdev.vabara.valmerabanicoruperez.repository.SubjectRepository;
