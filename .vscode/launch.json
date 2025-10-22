@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ValmerabanicoruperezApplication<valmerabanicoruperez>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.appdev.vabara.valmerabanicoruperez.ValmerabanicoruperezApplication",
+            "projectName": "valmerabanicoruperez",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
